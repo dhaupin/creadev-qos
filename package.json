@@ -1,0 +1,52 @@
+{
+  "name": "@creadev.org/qos",
+  "version": "0.3.1",
+  "type": "module",
+  "description": "Shared QoS utilities - retry, timeout, circuit breaker, http utilities",
+  "keywords": [
+    "qos",
+    "retry",
+    "timeout",
+    "circuit-breaker",
+    "http"
+  ],
+  "author": "dhaupin",
+  "repository": "https://github.com/dhaupin/creadev-qos",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./retry": {
+      "types": "./dist/retry.d.ts",
+      "import": "./dist/retry.js"
+    },
+    "./timeout": {
+      "types": "./dist/timeout.d.ts",
+      "import": "./dist/timeout.js"
+    },
+    "./bulkhead": {
+      "types": "./dist/bulkhead.d.ts",
+      "import": "./dist/bulkhead.js"
+    },
+    "./throttler": {
+      "types": "./dist/throttler.d.ts",
+      "import": "./dist/throttler.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.1"
+  }
+}
