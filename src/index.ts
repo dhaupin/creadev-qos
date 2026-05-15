@@ -45,3 +45,7 @@ export type { ThrottlerOptions, ThrottlerStats } from './throttler';
 // NEW from vant: Bulkhead
 export { Bulkhead, createBulkhead } from './bulkhead';
 export type { BulkheadOptions, BulkheadStats } from './bulkhead';
+
+// NEW: qosFetch - combined retry + timeout for fetch
+export { qosFetch } from './qos-fetch';
+export type { QoSFetchOptions } from './qos-fetch';
