@@ -3,21 +3,13 @@
   "version": "0.3.1",
   "type": "module",
   "description": "Shared QoS utilities - retry, timeout, circuit breaker, http utilities",
-  "keywords": [
-    "qos",
-    "retry",
-    "timeout",
-    "circuit-breaker",
-    "http"
-  ],
+  "keywords": ["qos", "retry", "timeout", "circuit-breaker", "http"],
   "author": "dhaupin",
   "repository": "https://github.com/dhaupin/creadev-qos",
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
+  "publishConfig": { "access": "public" },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -39,6 +31,14 @@
     "./throttler": {
       "types": "./dist/throttler.d.ts",
       "import": "./dist/throttler.js"
+    },
+    "./qos-fetch": {
+      "types": "./dist/qos-fetch.d.ts",
+      "import": "./dist/qos-fetch.js"
+    },
+    "./http": {
+      "types": "./dist/http.d.ts",
+      "import": "./dist/http.js"
     }
   },
   "scripts": {
