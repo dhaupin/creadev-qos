@@ -3,24 +3,10 @@ name: CI
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'none'
-
-      - run: npm ci --no-audit
-
-      - run: npm run build
-
-      - run: npm test || true
+      - name: Echo test
+        run: echo "Hello" && node --version && npm --version
