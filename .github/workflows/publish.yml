@@ -21,6 +21,6 @@ jobs:
 
       - run: npm ci
 
-      - run: npm publish --access public
+      - run: npm publish --access public --verbose 2>&1
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
