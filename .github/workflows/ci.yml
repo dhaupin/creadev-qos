@@ -10,21 +10,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout with sparse
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          sparse-checkout: |
-            package.json
-            package-lock.json
-            tsconfig.json
-            src
-            .github
-          sparse-checkout-cone-mode: false
+          fetch-depth: 1
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'none'
 
-      - run: npm ci
+      - run: npm ci --no-audit
 
       - run: npm run build
