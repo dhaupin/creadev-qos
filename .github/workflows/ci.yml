@@ -16,17 +16,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'none'
 
       - run: npm ci --no-audit
-        env:
-          DEBUG: '*'
 
       - run: npm run build
-        env:
-          DEBUG: '*'
 
       - run: npm test || true
-
-      - run: echo "=== BUILD OUTPUT ===" && ls -la dist/ 2>/dev/null || echo "no dist"
