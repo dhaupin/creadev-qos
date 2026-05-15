@@ -27,3 +27,5 @@ export { isSecureRequest } from './http';
 export { Throttler, createThrottler } from './throttler';
 // NEW from vant: Bulkhead
 export { Bulkhead, createBulkhead } from './bulkhead';
+// NEW: qosFetch - combined retry + timeout for fetch
+export { qosFetch } from './qos-fetch';

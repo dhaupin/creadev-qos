@@ -29,3 +29,5 @@ export { Throttler, createThrottler } from './throttler';
 export type { ThrottlerOptions, ThrottlerStats } from './throttler';
 export { Bulkhead, createBulkhead } from './bulkhead';
 export type { BulkheadOptions, BulkheadStats } from './bulkhead';
+export { qosFetch } from './qos-fetch';
+export type { QoSFetchOptions } from './qos-fetch';
